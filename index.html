@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bezier Curves</title>
+    <script src="Code/d3.min.js"></script>
+    <link rel="stylesheet" href="Code/style.css">
+    
+</head>
+<body>
+  
+    <div align-text="center">
+        <form id="svgForm">
+    <svg id="linear">
+        <path id="linear_bezier_path"></path>
+        <path id="linear_control_path"></path>
+    </svg>
+    <svg id="quadratic">
+        <path id="quadratic_bezier_path"></path>
+        <path id="quadratic_control_path"></path>
+    </svg>
+    <svg id="cubic">
+        <path id="cubic_bezier_path"></path>
+        <path id="cubic_control_path"></path>
+    </svg>
+    <svg id="quartic">
+        <path id="quartic_bezier_path"></path>
+        <path id="quartic_control_path"></path>
+    </svg>
+    </form>
+    <br>
+<div>
+    <label class="label" for="prog">  
+    Number of points:<input min=1 max=100 value=4 type="range" id="slider" class="slrange">
+</div><br>
+    <div class="radiogroup">
+    <form id="grpradio" onclick="radioMode()">
+        <div class="wrapper">
+        <input class="state" type="radio" id="comp" name="mode" value="5" checked>
+        <label class="label" for="comp">
+        <div class="indicator"></div>
+        <span class="text">Complete</span>
+      </label>
+    </div>
+    <div class="wrapper">
+        <input class="state" type="radio" id="prog" name="mode" value="3">
+        <label class="label" for="prog">
+            <div class="indicator"></div>
+            <span class="text">In-Progress</span>
+          </label>  
+    </div>
+    </form>
+    </div><br>
+    <div>
+        <label class="label" for="reset"> 
+        <button class="btncls" onclick="btnFun()" id="reset">Reset Control Points</button>
+    </label>
+    </div>
+    <script src="code.js"></script>
+    <br>
+    <div>
+        <h2>Bezier Curves</h2>
+        <h3>Ravi Kumar Podapati</h3>
+    </div>
+    </div>
+</body>
+</html>
